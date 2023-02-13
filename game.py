@@ -52,10 +52,10 @@ def run_game() -> None:
     return None
 
 #def ifjohn():
-    if goose_name == "John":
-        print("John you're such a Goose!")
-    elif goose_name != "John":
-        print(f'The goose is {goose_name}.')
+    #if goose_name == "John":
+        #print("John you're such a Goose!")
+    #elif goose_name != "John":
+        #print(f'The goose is {goose_name}.')
 
 # run the main routine
 if __name__ == '__main__':
