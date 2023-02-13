@@ -23,7 +23,6 @@ def validate_dataframe(df: pd.DataFrame) -> None:
     
     return None
 
-
 def get_goose(file_name: str) -> str:
     """Returns the name of the player from the csv file where animal = 'goose'
     @param file_name : the name of the csv file to use
@@ -43,13 +42,38 @@ def run_game() -> None:
             file_name = input(f'Cloud not find a file named "{filepath}". What is the input file name? ') 
             filepath = pathlib.Path(file_name)
         goose_name = get_goose(filepath)
-        print(f'The goose is {goose_name}.')
+        if goose_name == "John":
+            print("John you're such a Goose!")
+        elif goose_name != "John":
+            print(f'The goose is {goose_name}.')
     except Exception as ex:
         print(ex)
 
     return None
 
+#def ifjohn():
+    if goose_name == "John":
+        print("John you're such a Goose!")
+    elif goose_name != "John":
+        print(f'The goose is {goose_name}.')
 
 # run the main routine
 if __name__ == '__main__':
     run_game()
+    
+
+#finding which student is marked as the goose
+#print(class_df)
+
+
+#class_df.loc[class_df['animal']=="goose"]
+
+#updating the dataframe
+#class_df.loc[1] = ['Anne',"duck"]
+
+
+#class_df.loc[2] = ['John', "goose"]
+
+#updating the csv
+#class_df.to_csv("players.csv", index=False)
+
